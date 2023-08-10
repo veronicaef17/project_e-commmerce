@@ -8,8 +8,18 @@ class C_koneksi{
     // ini ada fungsi atau method yang bernama connection dan fungsi harus ada didalam kelas 
     public function connection(){
         // untuk isinya kita lanjutkan hari rabu 
-    }
+        $conn = mysql_connect('localhost','root','','project_e-commmerce');
 
+        if ($icon) {
+            die ("koneksi gagal di buat : ".mysql_connection_error());
+        }else{
+            echo "koneksi berhasi dibuat";
+        }
+    }
+    //inisialisasi objek harus di luar kls 
+$koneksi = new C_koneksi();
+//memanggil method atau fungsi yang ada di dalama kls c_koneksi
+$koneksi->connection();
 }
 
 
