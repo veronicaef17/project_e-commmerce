@@ -3,24 +3,27 @@
 // - didalamnya terdapat sebuah fungsi yang bernama connection 
 
 // ini adalah kelas, nama kelas harus sama persis dengan nama file 
+use C_koneksi as GlobalC_koneksi;
+
 class C_koneksi{
 
     // ini ada fungsi atau method yang bernama connection dan fungsi harus ada didalam kelas 
-    public function connection(){
+    public function conn(){
         // untuk isinya kita lanjutkan hari rabu 
-        $conn = mysql_connect('localhost','root','','project_e-commmerce');
+        $conn = mysqli_connect('localhost', 'root', '', 'e-ecommerce');
 
-        if ($icon) {
-            die ("koneksi gagal di buat : ".mysql_connection_error());
+        if (!$conn){
+            die ("koneksi gagal di buat : ".mysqli_connect_error());
         }else{
-            echo "koneksi berhasi dibuat";
+            return $conn;
         }
     }
-    //inisialisasi objek harus di luar kls 
-$koneksi = new C_koneksi();
-//memanggil method atau fungsi yang ada di dalama kls c_koneksi
-$koneksi->connection();
+    
 }
+//inisialisasi objek harus di luar kls 
+$conn = new C_koneksi();
+//memanggil method atau fungsi yang ada di dalama kls c_koneksi
+$conn->conn();
 
 
 
