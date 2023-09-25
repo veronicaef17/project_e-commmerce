@@ -9,16 +9,22 @@ $login = new C_login();
         $id = $_POST['id'];
         $nama = $_POST['nama'];
         $email = $_POST['email'];
-        $pass = $_POST['pass'];
+        $pass = $_POST['password'];
+
+        $pass = password_hash($pass, PASSWORD_DEFAULT);
+        
         $role = $_POST['role'];
 
-        $login->register($id,$nama,$email,$pass,$role);
+        $login->register($id=0,$nama,$email,$pass,$role);
     }
     elseif ($_GET ['aksi'] == 'login'){
         $email = $_POST['email'];
         $pass = $_POST['password'];
 
-        $login->login($email, $pass)
+        $login->login($email, $pass);
+    }
+    elseif ($_GET['aksi'] == "logout"){
+        $login->logout();
     }
 
 ?>

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>SB Admin 2 - Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -34,32 +34,21 @@
                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Login</h1>
                             </div>
-                            <form action="routers/r_login.php?aksi=register" method="POST" class="user">
-                                
-                                <!-- ini form id yang menerima inputan id dari user  -->
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="id"
-                                        placeholder="id" name="id" hidden>
-                                </div>
+                            <form action="routers/r_login.php?aksi=login" method="POST" class="user">
 
-                                <!-- ini form nama yang menerima inputan nama dari user  -->
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" id="nama"
-                                        placeholder="Nama Lengkap tenpa Spasi" name="nama">
-                                </div>
 
                                 <!-- ini form email yang menerima inputan email dari user  -->
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="email"
-                                        placeholder="Email Address" name="email">
+                                        placeholder="Email" name="email">
                                 </div>
 
                                 <!-- ini form password yang menerima inputan password dari user  -->
                                 <div class="form-group">
                                     <input type="password" class="form-control form-control-user" id="password"
-                                        placeholder="password" name="password">
+                                        placeholder="Password" name="password">
                                 </div>
 
                                 <!-- ini form role yang menerima inputan role dari user  -->
@@ -73,14 +62,14 @@
                                 </a> -->
 
                                 <div class="input-field">
-                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Register Account" id="" name="register">
+                                    <input type="submit" class="btn btn-primary btn-user btn-block" value="Login" id="" name="login">
                                 </div>
 
                                 <hr>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="login.php">Already have an account? Login!</a>
+                                <a class="small" href="register.php">Don't have an account? Here to register!</a>
                             </div>
                         </div>
                     </div>

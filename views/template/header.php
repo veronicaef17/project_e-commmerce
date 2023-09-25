@@ -1,3 +1,7 @@
+<?php session_start();
+if($_SESSION['data']==""){
+    header("location: ../login.php");
+} ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>E-COmmerce</title>
 
     <!-- Custom fonts for this template -->
     <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,5 +27,4 @@
     <!-- ../ berfungsi untuk keluar folder -->
     <!-- Custom styles for this page -->
     <link href="../assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-
 </head>

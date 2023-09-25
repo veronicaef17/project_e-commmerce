@@ -10,7 +10,7 @@ class C_koneksi{
     // ini ada fungsi atau method yang bernama connection dan fungsi harus ada didalam kelas 
     public function conn(){
         // untuk isinya kita lanjutkan hari rabu 
-        $conn = mysqli_connect('localhost', 'root', '', 'e-ecommerce');
+        $conn = mysqli_connect('localhost', 'root', '', 'e-commerce');
 
         if (!$conn){
             die ("koneksi gagal di buat : ".mysqli_connect_error());
